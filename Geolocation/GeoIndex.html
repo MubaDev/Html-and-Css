@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Geo Location</title>
+    </head>
+    <body>
+        <script>
+            if(typeof navigator.geolocation == 'undefined')
+            {
+                // alert("sorry,  no geolocation support.")
+                console.log("sorry, no geolocation support")
+                window.location = 'http://google.com'
+            }
+            else
+            {
+                // alert("Great, geolocation is supported")
+                // console.log("Great, geolocation is supported")
+                // window.location = 'http://google.com'
+                navigator.geolocation.getCurrentPosition(granted, denied)
+                function denied(error)
+                {
+                    switch(error.code)
+                    {
+                        case 1: message = 'Permission Denied'; break
+                        case 2: message = 'Position Unavailable'; break
+                        case 3: message = 'Operation Timed Out'; break
+                        case 4: message = 'Unknown Error'
+                    }
+                    console.log("Error with geolocation: " + message)
+                    window.location = 'no_geo.html'
+                }
+                function granted(Position)
+                {
+                    console.log("Geolocation granted")
+                    lat = Position.coords.latitude
+                    lon = Position.coords.longitude
+                    map = "https://www.google.com/maps/@"
+                    window.location = map + lat + "," + lon + ",8z"
+                }
+            }
+        </script>
+    </body>
+</html>

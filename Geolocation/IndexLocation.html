@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geo Location</title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+            if(typeof navigator.geolocation == 'undefined')
+            {
+                alert("Geo location not available")
+                console.log("sorry, not available")
+            }
+            else
+            {
+                alert("geo location is available")
+                console.log("go get it")
+                navigator.geolocation.getCurrentPosition(success,denied)
+                function success(position)
+                {
+                    lat = position.coords.latitude
+                    lon = position.coords.longitude
+                    map = "https://www.google.com/maps/@"
+                    window.location = map + lat + "," + lon + "*z"
+                }
+                function denied(error)
+                {
+                    switch(error.code)
+                    {
+                        case 1: "dfjalsfj afd"; break
+                        case 2: "uuudb sdgg"; break
+                        case 3: "call naf"; break
+                        case 4: "iaga adghllk"; break
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

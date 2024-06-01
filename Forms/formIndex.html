@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML5 Forms</title>
+    </head>
+    <body>
+        <form id="myform" method="post" action="myform.php" autocomplete="on">
+            First Name <input type="text" name="fname"><br>
+            Last Name <input type="text" name="lname" autofocus="autofocus" autocomplete="off">
+            <input type="submit"> <br>
+            for form action <input type="text" name="ffaction">
+            <input type="submit" formaction="myform2.php">
+        </form>
+        Outer Name <input type="text" name="oname" form="myform" required>
+        <fieldset form="myform">
+            field set Name <input type="text" name="fsname" form="myform"><br>
+            field set name two <input type="text" name="fstname" form="myform">
+        </fieldset>
+        <br><br><br><br>
+        <form action="prog.php" method="post" enctype="multipart/form-data">
+            <input type="file">
+            <input type="submit">
+            <input type="text" name="filename">
+            <input type="submit" formaction="prog2.php" formenctype="application/x-www-form-urlencoded" 
+            formmethod="get" >
+        </form>
+        <input type="file" name="docs" multiple="multiple" form="myform" formaction="myform3.php">
+        <br><br><br><br><br>
+        <form action="" method="post">
+            select your favorite  <input type='url' name='site' list='links'>
+            <input type="submit">            
+        </form>
+        <datalist id='links'>
+            <option label="google" value="http://www.google.com">
+            <option label="yahoo" value="http://www.yahoo.com">
+            <option value="http://bing.com" label="Bing">
+            <option value="http://ask.com" label="Ask">
+        </datalist>
+        <form method="post">
+            Choose meeting time <input type="time" name="meeting" value="14:00" 
+            min="14:00" max="17:00" step="3600">
+            <input type="date" name="" id="">
+            <input type="week" name="" id="">
+            <input type="datetime" name="" id="">
+            <input type="datetime-local" name="" id=""><br><br><br>
+            <input type="text" name="" id="" pattern="[a-zA-Z0-9 ]+" title="use number and latters">
+            <input type="color" name="" id="">
+            <input type="number" name="" id="" value="18">
+            <input type="range" min="1" max="100" name="" id="" value="10" step="1"
+            oninput='this.nextElementSibling.value = this.value'>
+            <output>10</output>
+            <input type="search" name="" id="">
+            <input type="submit" name="" id="">
+        </form>
+    </body>
+</html>
