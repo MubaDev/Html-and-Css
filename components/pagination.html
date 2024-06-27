@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination</title>
+    <style>
+      .pagination {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15%;
+      }
+      .btn {
+        border: none;
+        cursor: pointer;
+      }
+      .btn--left,
+      .btn--right {
+        height: 48px;
+        width: 48px;
+        background-color: #fff;
+        border: 1px solid #087f5b;
+        border-radius: 50%;
+      }
+      .btn-icon {
+        stroke: green;
+      }
+      .btn--left:hover,
+      .btn--right:hover {
+        background-color: #087f5b;
+        .btn-icon {
+          stroke: #fff;
+        }
+      }
+      /* .btn--page { */
+      .page-link {
+        border: none;
+        height: 36px;
+        width: 36px;
+        font-size: 18px;
+        border-radius: 50%;
+        background-color: #fff;
+        text-decoration: none;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      /* .btn--page:hover { */
+      .page-link:hover,
+      .page-link:active {
+        background-color: #087f5b;
+        color: #fff;
+      }
+      /* .page-link:visited, */
+      .page-link:link,
+      .page-link.link-current {
+        background-color: #087f5b;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pagination">
+      <button class="btn btn--left">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M15.75 19.5 8.25 12l7.5-7.5"
+          />
+        </svg>
+      </button>
+      <!-- <button class="btn btn--page">1</button>
+      <button class="btn btn--page">2</button>
+      <button class="btn btn--page">3</button>
+      <button class="btn btn--page">4</button>
+      <button class="btn btn--page">5</button>
+      <button class="btn btn--page">6</button> -->
+      <a href="" class="page-link">1</a>
+      <a href="" class="page-link">2</a>
+      <a href="" class="page-link link-current">3</a>
+      <a href="" class="page-link">4</a>
+      <a href="" class="page-link">5</a>
+      <a href="" class="page-link">6</a>
+      <div><p>...</p></div>
+      <a href="" class="page-link">26</a>
+      <!-- <button class="btn btn--page">26</button> -->
+      <button class="btn btn--right">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="m8.25 4.5 7.5 7.5-7.5 7.5"
+          />
+        </svg>
+      </button>
+    </div>
+  </body>
+</html>
